@@ -24,7 +24,7 @@ namespace Test
         
         private void btnSort_Click(object sender, EventArgs e)
         {
-            if(Regex.Match(txtNum.Text, "([a-zA-Z])+").Success)
+            if(Regex.Match(txtNum.Text, "([^0-9;])+").Success)
             {
                 MessageBox.Show("Must contain only numbers with separator between!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
